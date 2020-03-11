@@ -1,5 +1,7 @@
 # CONSUL Installer [![Build Status](https://travis-ci.org/consul/installer.svg?branch=master)](https://travis-ci.org/consul/installer)
 
+**WARNING: Using the master branch will install CONSUL's current master branch. To install the latest stable version, use [release 1.1.0](https://github.com/consul/installer/tree/1.1.0).**
+
 [CONSUL](https://github.com/consul/consul) installer for production environments
 
 Using [Ansible](http://docs.ansible.com/), it will install and configure the following:
@@ -104,12 +106,6 @@ Create your [fork](https://help.github.com/articles/fork-a-repo/)
 
 Setup locally for your [development environment](https://docs.consulproject.org/docs/english-documentation/introduction/local_installation)
 
-Checkout the latest stable version:
-
-```
-git checkout origin/1.1.0 -b stable
-```
-
 Create your `deploy-secrets.yml`
 
 ```
@@ -136,13 +132,13 @@ Make a change in a view and push it your fork in Github
 ```
 git add .
 git commit -a -m "Add sample text to homepage"
-git push origin stable
+git push origin master
 ```
 
 Deploy to production
 
 ```
-branch=stable cap production deploy
+cap production deploy
 ```
 
 You should now see that change at your remote server's ip address
@@ -189,13 +185,13 @@ Using https instead of http is an important security configuration. Before you b
 
 Once you have that setup we need to configure the Installer to use your domain in the application.
 
-First, uncomment the `domain` variable in the [configuration file](https://github.com/consul/installer/blob/1.1.0/group_vars/all) and update it with your domain name:
+First, uncomment the `domain` variable in the [configuration file](https://github.com/consul/installer/blob/master/group_vars/all) and update it with your domain name:
 
 ```
 #domain: "your_domain.com"
 ```
 
-Next, uncomment the `letsencrypt_email` variable in the [configuration file](https://github.com/consul/installer/blob/1.1.0/group_vars/all) and update it with a valid email address:
+Next, uncomment the `letsencrypt_email` variable in the [configuration file](https://github.com/consul/installer/blob/master/group_vars/all) and update it with a valid email address:
 
 ```
 #letsencrypt_email: "your_email@example.com"
@@ -238,7 +234,7 @@ smtp_password:       "password"
 smtp_authentication: "plain"
 ```
 
-There are many more variables available check them out [here]((https://github.com/consul/installer/blob/1.1.0/group_vars/all))
+There are many more variables available check them out [here]((https://github.com/consul/installer/blob/master/group_vars/all))
 
 ## Other deployment options
 
@@ -268,7 +264,7 @@ If you do not have `root` access, you will need your system administrator to gra
 
 ## Using a different user than deploy
 
-Change the variable [deploy_user](https://github.com/consul/installer/blob/1.1.0/group_vars/all#L12) to the username you would like to use.
+Change the variable [deploy_user](https://github.com/consul/installer/blob/master/group_vars/all#L12) to the username you would like to use.
 
 ## Ansible Documentation
 
