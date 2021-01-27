@@ -12,4 +12,5 @@
     - { regexp: '#   :user_name: (.)*',            line: '  :user_name:            "{{ smtp_user_name }}"' }
     - { regexp: '#   :password: (.)*',             line: '  :password:             "{{ smtp_password }}"' }
     - { regexp: '#   :authentication: (.)*',       line: '  :authentication:       "{{ smtp_authentication }}"' }
+    - { regexp: '#   :TLS: (.)*',                  line: '  :TLS:                  "{{ smtp_tls }}"' }
     - { regexp: '#   :enable_starttls_auto: (.)*', line: '  :enable_starttls_auto: true' }

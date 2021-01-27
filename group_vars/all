@@ -41,7 +41,9 @@ smtp_port:           25
 smtp_domain:         "your_domain.com"
 smtp_user_name:      "username"
 smtp_password:       "password"
-smtp_authentication: "plain"
+smtp_authentication: "plain"		# should be login if tls is used
+smtp_tls:	      false 		# should be true if authentication is login
+#smtp_starttls_auto:  always true by default
 
 #LetsEncrypt
 #letsencrypt_email: "your_email@example.com"
