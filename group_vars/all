@@ -47,3 +47,8 @@ smtp_tls:	      false 		# should be true if authentication is login
 
 #LetsEncrypt
 #letsencrypt_email: "your_email@example.com"
+
+# Errbit
+errbit: False
+errbit_dir: "{{ home_dir }}/errbit"
+errbit_domain: "errbit.{{ domain }}"
